@@ -19,7 +19,7 @@
                     <a href=""><img src="/assets/icon/admin.png" alt=""></a>
                     <a href="/Admin/AdminLogin/AdminLogin.html" class="a-nav">log out</a>
                 </div>
-            </div>1
+            </div>
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
