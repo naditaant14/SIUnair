@@ -1,3 +1,5 @@
+{{-- nanan --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +63,7 @@
                     </div>
                     <div class="kategori-container-list-item">
                         <input type="checkbox" id="ppt" name="ppt" value="{{ $materis->ppt }}">
-                        <label for="ppt">PPT</label>    
+                        <label for="ppt">PPT</label>
                     </div>
                     <div class="kategori-container-list-item">
                         <input type="checkbox" id="consol" name="contoh_soal" value="{{ $materis->contoh_soal }}">
@@ -81,17 +83,17 @@
             <script>
                 $(document).ready(function() {
                     $('#smt').val();
-                    $('#matkul').prop('disabled', false); 
+                    $('#matkul').prop('disabled', false);
 
                     $('#smt').change(function() {
                         var selectedSemesterId = $(this).val();
 
                         if (selectedSemesterId === '') {
-                            $('#matkul').val('').prop('disabled', true); 
+                            $('#matkul').val('').prop('disabled', true);
                             return;
                         }
 
-                        $('#matkul').prop('disabled', false); 
+                        $('#matkul').prop('disabled', false);
 
                         $('#matkul option').each(function() {
                             var semesterId = $(this).data('semester-id');
