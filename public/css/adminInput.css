@@ -1,0 +1,164 @@
+:root{
+    --img-content: "Pilih file";
+    --img-type-content : "Image.png / .jpg / .gif";
+}
+
+body {
+    padding: 0 50px;
+}
+
+.head {
+    margin: 120px auto 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 35px;
+    max-width: 913px;
+    box-shadow: 2px 2px 6px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 70px;
+}
+
+i.fa {
+    display: none;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: large;
+    margin-right: 5px;
+}
+
+i.fa:hover {
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+textarea {
+    height: 238px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-input input, select {
+    height: 39px;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 10px;
+}
+
+.bebas {
+    flex-direction: row;
+    gap: 25px;
+}
+
+.semester-container, .kategori-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.kategori-container-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kategori-container-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type='file'] {
+    max-width: 160px;
+    position: relative;
+    cursor: pointer;
+}
+
+#img::after, #file::after {
+    margin-left: 10px;
+    margin-top: 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ececec;
+}
+
+.file-name-container {
+    position: relative;
+}
+
+.file-name {
+    z-index: 2;
+    position: absolute;
+    top: 6px;
+    left: 3px;
+}
+
+#file::after {
+    content: "Pilih file";
+}
+
+#img::after {
+    content: var(--img-content);
+}
+
+#img::before, #file::before {
+    position: absolute;
+    right: 4px;
+    z-index: 2;
+}
+
+#img::before {
+    content: url(/assets/icon/bi_file-image.png);
+}
+
+#file::before {
+    content: url(/assets/icon/bi_file-earmark-text.png);
+}
+
+.button {
+    align-self: flex-end;
+}
+
+.image-container {
+    margin-top: 10px;
+    position: relative;
+    max-width: 530px;
+    height: 135px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-container::after {
+    content: var(--img-type-content);
+    z-index: -1;
+    opacity: 20%;
+}
+
+@media screen and (max-width:768px) {
+    .bebas {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:468px) {
+    .kategori-container-list {
+        flex-direction: column;
+    }
+}

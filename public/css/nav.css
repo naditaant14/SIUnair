@@ -1,0 +1,143 @@
+/* display */
+nav {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: #E1EDF4;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.nav-user {
+    background-color: #C2DCE9;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 50px 0 80px;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    background-color: white;
+    height: 64px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 80px;
+}
+
+.status-container, .menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.add-gap {
+    gap: 40px;
+}
+
+.nav-list .status-container {
+    display: none;
+}
+
+
+.admin-container img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.a-nav:hover {
+    text-decoration: underline;
+}
+
+/* Responsive nav */
+@media screen and (max-width:1300px) {
+    .nav-list {
+        gap: 40px;
+    }
+
+    .nav-container {
+        margin: 0 30px 0 30px;
+    }
+}
+@media screen and (max-width:768px) {
+    .nav-list {
+        padding: 60px 20px 0 30px;
+        position: absolute;
+        left: 0px;
+        height: 1000vh;
+        top: 0vh;
+        background-color:#E1EDF4;;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        transform: translate(-100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-list .status-container, .menu-container {
+        display: flex;
+    }
+
+    .menu-container {
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat-col {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .none {
+        display: none;
+    }
+}
+
+.nav-active {
+    transform: translate(0);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

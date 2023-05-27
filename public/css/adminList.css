@@ -1,0 +1,165 @@
+.container {
+    margin: 100px 30px 30px;
+}
+
+.container .blue, .admin-time, .file, .container-content, .content, .action-buttons, .action-buttons .button {
+    display: flex;
+}
+
+.admin-time > *, .file > *, .description > * {
+    font-size: 14px;
+}
+
+.admin-time, .file, .action-buttons {
+    justify-content: space-between;
+}
+
+.container .button a, .container .blue  {
+    color: black;
+}
+
+.container .blue {
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+    background-color: #EAF8FF;
+}
+
+table {
+    width: 100%;
+}
+
+tr td:nth-child(1) {
+    width: 20px;
+}
+
+tr td:nth-child(2) {
+    width: 50%;
+}
+
+tr td:nth-child(3), tr td:nth-child(4) {
+    text-align: end;
+}
+
+td {
+    vertical-align: text-top;
+    font-size: large;
+}
+
+tr td a {
+    color: black;
+}
+
+tr td a:hover {
+    text-decoration: underline;
+}
+
+.container-content {
+    width: 100%;
+    gap: 30px;
+}
+
+ol li a {
+    display: block;
+}
+
+.semester-container {
+    flex-grow: 3; 
+}
+
+.uploaded-container {
+    max-width: calc(30% + 14vw);
+}
+
+.semester-list {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.semester-list:nth-child(odd) {
+    background-color: #E1EDF4;
+}
+
+.semester-list:nth-child(even) {
+    background-color: #F8F2CE;
+}
+
+.uploaded-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid rgba(135, 186, 213, 0.5);
+    border-radius: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bg{
+    max-width: 179px;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content {
+    gap: 10px;
+}
+
+.file {
+    background-color: #D9D9D9;
+    padding: 3px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.file img {
+    width: 25px;
+    height: 25px;
+}
+
+.action-buttons {
+    width: 100%;
+}
+
+.action-buttons .button {
+    height: 35px;
+    flex-grow: 3;
+    max-width: 80px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5px;
+}
+
+
+@media screen and (max-width:768px) {
+    .container-content {
+        flex-direction: column;
+    }
+
+    .uploaded-container {
+        max-width: calc(60% + 14vw);
+    }
+}    
+
+@media screen and (max-width:512px) {
+    .uploaded-container {
+        max-width: calc(100% + 14vw);
+    }
+
+    td {
+        font-size: medium;
+        padding-right: 5px;
+    }
+
+    .semester-list {
+        padding: 5px;
+    }
+
+    .bg {
+        max-width: calc(179px - 50px);
+        height: calc(130px - 50px);
+    }
+}    
+

@@ -1,0 +1,144 @@
+.container {
+    margin: 100px 49px;
+    max-width: 962px;
+}
+
+.content-container h2 {
+    margin: 30px 0 35px;
+}
+
+.action-container, .search, button, .admin-date, .item-content-container, .item-content, .action-buttons, .file {
+    display: flex;
+}
+
+.admin-date, .item-content-container, .file, .action-buttons, .action-container {
+    justify-content: space-between;
+}
+
+.action-container {
+    gap: 10px;
+}
+
+.search {
+    gap: 15px;
+}
+
+button {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 3px;
+}
+
+.search input {
+    max-width: 353px;
+    border-radius: 10px;
+}
+
+.search input, .action-container button {
+    background-color: #EBEBEB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search button {
+    max-width: 80px;
+}
+
+button.blue {
+    background-color: #EAF8FF;
+}
+
+.item-container {
+    margin-bottom: 30px;
+    padding: 15px 25px;
+}
+
+.item-container:nth-child(odd) {
+    border: 5px solid #C2DCE9;
+}
+
+.item-container:nth-child(even) {
+    border: 5px solid #F2E69C;
+}
+
+.item-content-container {
+    width: 100%;
+    gap: 20px;
+}
+
+.item-content {
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.item-content img {
+    object-fit: cover;
+    max-width: 245px;
+    height: 140px;
+    border-radius: 10px;
+}
+
+.item-content p span {
+    font-size: large;
+    font-weight: 500;
+}
+
+.file {
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    align-items: center;
+}
+
+.file img {
+    width: 19px;
+    height: 16px;
+}
+
+.action-buttons {
+    gap: 3px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.action-buttons .button {
+    height: 35px;
+    max-width: 90px;
+}
+
+.navigator {
+    color: black;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: larger;
+}
+
+.navigator span {
+    margin: 0 10px;
+}
+
+.navigator a {
+    color: black;
+}
+
+@media screen and (max-width:688px) {
+    .action-container {
+        flex-direction: column;
+    }
+
+    .item-content-container {
+        flex-direction: column;
+    }
+
+} 
+
+@media screen and (max-width:432px) {
+    .search input {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: end;
+    }
+} 
